@@ -66,7 +66,7 @@ and more
 <a href="#table-of-contents">Back to table of contents</a>
 
 ## Credits
-Work is owned and maintained by Adekunle Adeniran [@flourishcodes](https://twitter.com/flourishcodes)
+Work is owned and maintained by Abrham Addis [@abrhamadddis](https://github.com/abrhamadddis)
 
 Collaborators are acknowledged within each project
 
