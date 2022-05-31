@@ -12,5 +12,3 @@ elif r == 0:
     print("Last digit of", number, "is", r, "and is 0")
 else:
     print("Last digit of", number, "is", r, "and is less than 6 and not 0")
-
-
