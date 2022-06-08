@@ -1,8 +1,13 @@
 #!/usr/bin/python3
 def print_matrix_integer(matrix=[[]]):
-    if len(matrix) == 1 and len(matrix[0]) == 0:
+    if len(matrix) == 1 and any(matrix) is False:
         print()
-        return
     for row in matrix:
-        for i in range(len(row)):
-            print("{:d}".format(row[i]), end=(" " if i < len(row) - 1 else "\n"))
+        count = 0
+        for n in row:
+            if count == len(row) - 1:
+                print("{:d}".format(n), end="")
+                print()
+            else:
+                print("{}".format(n), end=" ")
+            count += 1
