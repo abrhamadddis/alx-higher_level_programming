@@ -1,0 +1,45 @@
+0-add_integer Module:
+
+
+Import "add_integer" form "0-add_integer" module
+
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Should return sum of two positive integers:
+	
+	>>> add_integer(1, 1)
+	2
+
+Should return the sum if one element is negative integer:
+
+	>>> add_integer(2, -1)
+	1
+
+Should return the sum if both elements are negative integer:
+
+	>>> add_integer(-2, -1)
+	-3
+
+Should return the sum two floats as an integer:
+	>>> add_integer(1.1, 2.1)
+	3
+
+Should return the sum one integer and one float:
+	>>> add_integer(1, 2.1)
+	3
+
+Should not add stirng with number:
+	>>> add_integer('cool', 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must ba an integer
+
+Should return sum if one value is provided:
+	>>> add_integer(1)
+	99
+
+Should not return sum of list with int:
+	>>> add_integer([1, 2, 3], 1)
+	Traceback (most recent call last):
+	...
+	TypeError: a must be an integer
