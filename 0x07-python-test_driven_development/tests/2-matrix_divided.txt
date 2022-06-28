@@ -1,0 +1,37 @@
+2-matrix_divided Module:
+=====================
+
+Import "matrix_divided" from "2-matrix_divided' module
+    >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
+
+passeding all integer value:
+    >>> matrix_divided([[4, 6, 8], [10, 12, 14]], 2)
+    [
+        [2, 3, 4]
+        [5, 6, 7]
+    ]
+
+passeding all float value:
+     >>> matrix_divided([[4.4, 6.6, 8.8], [10.10, 12.12, 14.14]], 2.2)
+     [
+        [2, 3, 4]
+        [4.59, 5.50, 6.42]
+     ] 
+
+passeing a String in one of the list:
+     >>> matrix_divided([[4, 6, 8], [10, 12, 'bura']], 2)
+     Traceback (most recent call list):
+     ...
+     TypeError: must be an integer or float
+
+passing wrong dimension rows for the matrix:
+     >>> matrix_divided([[4, 6, 8], [10, 12]], 2)
+     Traceback (most recent call):
+     ...
+     TypeError: enter the right size list
+
+passing zero for the div:
+     >>> matrix_divided([[4, 6, 8], [10, 12, 14]], 0)
+     Traceback (most recent call):
+     ...
+     ZeroDivisionError: you assigned zero to div
