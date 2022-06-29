@@ -20,7 +20,7 @@ class Rectangle:
                 return '#' * self.width
 
     def __repr__(self):
-        x = 'Rectangle(' + str(self.width) + ',' + str(self.height) + ')'
+        x = 'Rectangle(' + str(self.width) + ', ' + str(self.height) + ')'
         return x
 
     @property
