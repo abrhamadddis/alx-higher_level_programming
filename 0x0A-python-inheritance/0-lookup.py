@@ -9,4 +9,3 @@ def lookup(obj):
     check using the dir function
     '''
     return dir(obj)
-    
