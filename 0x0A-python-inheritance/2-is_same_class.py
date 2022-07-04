@@ -9,7 +9,4 @@ def is_same_class(obj, a_class):
     check if the instance is the same
     '''
 
-    if issubclass(a_class, type(obj)):
-        return True
-    else:
-        False
+    return issubclass(a_class, type(obj))
