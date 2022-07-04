@@ -1,16 +1,14 @@
 #!/usr/bin/python3
-'''6-base_geometry.py'''
+# 6-base_geometry.py
+"""Defines a base geometry class BaseGeometry.
+"""
 
 
 class BaseGeometry:
-    '''
-    Public instance method: def area(self): that raises an
-    Exception with the message area() is not implemented
-    '''
+    """Represent base geometry.
+    """
 
     def area(self):
-        '''
-        raise an exception
-        '''
+        """Not implemented.
+    """
         raise Exception("area() is not implemented")
-        
