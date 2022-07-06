@@ -1,8 +1,15 @@
 #!/usr/bin/python3
-'''Python Function that reads a file and prints to stdout'''
+'''
+read a text file
+'''
 
 
 def read_file(filename=""):
-    with open(filename, encoding='utf-8') as f:
-        for line in f:
-            print(line, end="")
+    '''
+    reads file named filename
+    Args:
+        - filename: name of file
+    '''
+    with open(filename) as f:
+        line = f.read()
+        print(line, end='')
