@@ -1,10 +1,17 @@
 #!/usr/bin/python3
-'''
-script that writes a string to a text file and return the length of string
-'''
+# 3-write_file.py
+"""Defines a file-writing function.
+"""
 
 
-def write_file(filname="", text=""):
-    with open(filname, 'w+') as f:
-        length_stirng = f.write(text)
-    return length_stirng
+def write_file(filename="", text=""):
+    """Write a string to a UTF8 text file.
+
+    Args:
+        filename (str): The name of the file to write.
+        text (str): The text to write to the file.
+    Returns:
+        The number of characters written.
+    """
+    with open(filename, "w", encoding="utf-8") as f:
+        return f.write(text)
