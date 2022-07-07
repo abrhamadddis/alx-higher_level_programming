@@ -1,9 +1,8 @@
-#!/usr/bin/pythhon3
-""" returns a json representation of an object
-"""
+#!/usr/bin/python3
+"""Function that returns a dictionary description"""
 
 
 def class_to_json(obj):
-    """returns a json representation of
-    the obj object"""
+    """ function return dictonary of object file"""
+
     return obj.__dict__
