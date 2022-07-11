@@ -2,6 +2,7 @@
 """ a class Rectangle inherites form base class"""
 
 
+from optparse import Values
 from models.base import Base
 
 
@@ -15,12 +16,41 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def update(self, *args, **kwargs):
+        '''set up args for a rectangle'''
+        if args:
+            if len(args) == 1:
+                self.id = args[0]
+            if len(args) == 2:
+                self.id = args[0]
+                self.__width = args[1]
+            if len(args) == 3:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+            if len(args) == 4:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+            if len(args) == 5:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
+        else:
+            for key, vlaues in kwargs.items():
+                if hasattr(self, key) is True:
+                    setattr(self, key, Values)
+
     def area(self):
         '''a public method that return the area of a rectangle'''
         return self.__width * self.__height
 
     def display(self):
         '''method for printing Rectangel to stdout'''
+        print('\n' * self.y, end="")
         for i in range(self.height):
             for j in range(self.width):
                 print ("#", end="")
@@ -28,12 +58,9 @@ class Rectangle(Base):
 
     def __str__(self):
         '''return a string representation of Rectatngle'''
-        a = self.id
-        b = self.width
-        c = self.height
-        d = self.x
-        e = self. y
-        print("[Rectangle] {} {}/{} - {}/{}".format(a, d, e, b, c ))
+        a, d, e, = self.id, self.width, self.height
+        b, c = self.x, self.y
+        return("[Rectangle] ({}) {}/{} - {}/{}".format(a, b, c, d, e))
 
     @property
     def width(self):
