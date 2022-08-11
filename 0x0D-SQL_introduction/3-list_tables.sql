@@ -1,3 +1,3 @@
 -- a script that list the table of mysql database serve
-USE mysql;
+USE MySQL;
 SHOW TABLES;
