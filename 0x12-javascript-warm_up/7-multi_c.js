@@ -3,7 +3,7 @@ const argv = process.argv;
 let input;
 if (argv[2] && !isNaN(parseInt(argv[2])) === true) {
   input = argv[2];
-  for (let i = 0; i <= input; i++) {
+  for (let i = 1; i <= input; i++) {
     console.log('C is fun');
   }
 } else {
